@@ -1,0 +1,1 @@
+export const database = 'mongodb+srv://fundvolt:<8O2yURfGAtEYXfLX>@fundvolt-tueeg.gcp.mongodb.net/test?retryWrites=true&w=majority'
