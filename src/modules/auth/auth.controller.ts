@@ -7,7 +7,7 @@ import { LoggingInterceptor } from 'src/interceptors/logging.interceptor';
 export class AuthController {
   constructor(private readonly authService: AuthService) { }
 
-  @Post('auth/login')
+  @Post('login')
   async login(@Body() user) {
     return this.authService.login(user);
   }
