@@ -1,13 +1,11 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, UseInterceptors } from '@nestjs/common';
 import { User } from './user.interface';
 import { UserService } from './user.service';
+import { LoggingInterceptor } from 'src/interceptors/logging.interceptor';
 
 @Controller('user')
+@UseInterceptors(LoggingInterceptor)
 export class UserController {
   constructor(private readonly userService: UserService) {}
-  @Post('addclient')
-  async addUser(@Body() obj: User): Promise<User> {
-    if ((obj.role = 'client')) return await this.userService.insertUser(obj);
-    // return  await this.investorService.investorClient(obj);
-  }
+
 }

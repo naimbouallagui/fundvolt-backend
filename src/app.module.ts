@@ -8,9 +8,10 @@ import { database } from './config/database';
 import { ClientModule } from './modules/client/client.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CommonModule } from './modules/passport/passport.module';
+import { InvestorModule } from './modules/investor/investor.module';
 
 @Module({
-  imports: [ProjectModule, UserModule, ClientModule,CommonModule, AuthModule,MongooseModule.forRoot(database, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })],
+  imports: [ProjectModule, UserModule, ClientModule,CommonModule, AuthModule,MongooseModule.forRoot(database, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }), InvestorModule],
   controllers: [AppController],
   providers: [AppService],
 })

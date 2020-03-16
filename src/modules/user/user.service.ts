@@ -6,9 +6,6 @@ import { Model } from 'mongoose';
 @Injectable()
 export class UserService {
         constructor(@InjectModel('User') private readonly userModel: Model<User>) { }
-        async insertUser(obj: User) {
-            return await this.userModel.create(obj);
-        }
         async validateUserJWT(payload): Promise<any> {
             return await this.userModel.findOne({username: payload.data.username}).exec();
           }
