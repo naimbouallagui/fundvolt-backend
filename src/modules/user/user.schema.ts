@@ -9,6 +9,7 @@ export const userSchema: Schema = new Schema({
     role: { type: String, required: true },
     status: { type: String, required: true },
     client: { type: Schema.Types.ObjectId, ref: 'Client' },
+    investor: { type: Schema.Types.ObjectId, ref: 'Investor' },
 })
 
 // let user:any
