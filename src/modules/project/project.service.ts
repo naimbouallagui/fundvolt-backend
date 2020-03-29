@@ -11,6 +11,9 @@ export class ProjectService {
     async insertProject(obj: Project) {
         return await this.projectModel.create(obj);
     }
+    async getProjects() {
+        return await this.projectModel.find();
+    }
     
 
 }

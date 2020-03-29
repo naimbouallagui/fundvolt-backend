@@ -5,10 +5,10 @@ export interface Project extends Document{
     categorie: string,
     description: string,
     location: string,
-    price: Number,
-    donation :{
-        // id: ,
-        donate:Number,
-    }
+    price: number,
+    // donation :{
+    //     // id: ,
+    //     donate:number,
+    // }
   
 }

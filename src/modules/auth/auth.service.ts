@@ -33,6 +33,7 @@ export class AuthService {
       else {
         res.password = null;
     return {
+      ...res._doc,
       access_token: jwt.sign({data: res, exp: Math.floor(Date.now()/1000) + (3600 *24)},'secretKeeeey'),
     };
   }
