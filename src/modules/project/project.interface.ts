@@ -6,6 +6,7 @@ export interface Project extends Document{
     description: string,
     location: string,
     price: number,
+    img: string
     // donation :{
     //     // id: ,
     //     donate:number,

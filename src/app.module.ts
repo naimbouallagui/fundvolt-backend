@@ -9,10 +9,24 @@ import { ClientModule } from './modules/client/client.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CommonModule } from './modules/passport/passport.module';
 import { InvestorModule } from './modules/investor/investor.module';
+import {  MulterAppModule } from './modules/multer/multerapp.module';
 
 @Module({
-  imports: [ProjectModule, UserModule, ClientModule,CommonModule, AuthModule,MongooseModule.forRoot(database, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }), InvestorModule],
+  imports: [
+    ProjectModule,
+    UserModule,
+    ClientModule,
+    CommonModule,
+    AuthModule,
+    MongooseModule.forRoot(database, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+    }),
+    InvestorModule,
+    MulterAppModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
